@@ -6,7 +6,7 @@ import { useUser } from "../contexts/UserContext";
 import { jwtDecode } from "jwt-decode";
 
 const Login = () => {
-  const baseURL = import.meta.env.VITE_URL;
+  const baseURL = import.meta.env.VITE_API_BASE_URL;
   const navigate = useNavigate();
 
   const [formData, setFormData] = useState({
@@ -29,7 +29,7 @@ const Login = () => {
   };
 
   const handleLogin = async () => {
-    // console.log("Base URL:", import.meta.env.VITE_URL);
+    // console.log("Base URL:", import.meta.env.VITE_API_BASE_URL);
     try {
       const res = await axios.post(`${baseURL}/auth/login`, formData);
       if (res.data) {

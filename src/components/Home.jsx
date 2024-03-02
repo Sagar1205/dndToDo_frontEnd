@@ -8,7 +8,7 @@ import Header from "./Header";
 
 
 const Home = () => {
-  const baseURL = import.meta.env.VITE_URL;
+  const baseURL = import.meta.env.VITE_API_BASE_URL;
   const { currentUser, setCurrentUser } = useUser();
 
   const [lists, setLists] = useState([]);

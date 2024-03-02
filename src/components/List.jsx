@@ -9,7 +9,7 @@ import { useUser } from "../contexts/UserContext";
 import { useDrop } from "react-dnd";
 
 const List = ({ listName, listId, fetchLists }) => {
-  const baseURL = import.meta.env.VITE_URL;
+  const baseURL = import.meta.env.VITE_API_BASE_URLRL;
   const { currentUser, setCurrentUser } = useUser();
   const { isDrop, setIsDrop} = useUser();
 
