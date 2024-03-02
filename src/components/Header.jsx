@@ -1,8 +1,10 @@
 import React from "react";
 import { useUser } from "../contexts/UserContext";
+import { useNavigate } from "react-router-dom";
 
 const Header = () => {
   const { currentUser, setCurrentUser } = useUser();
+  const navigate = useNavigate();
 
   const handleLogout = () => {
     setCurrentUser(null);
